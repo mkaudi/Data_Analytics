@@ -1,0 +1,47 @@
+
+- formating data (Data Cleaning)
+	- dropped lastorder_platform
+	- Unnamed
+	- 7 days
+	- Identifying null or missing values: 
+		- (-1) values list
+		- comparison of sum amount spent_30days vs lastuser_usecase categories including the null values
+
+ - feature engineering
+	- formatting the dates
+	- creating ratio clumns
+	- creating interactions per day
+	- number of days on the app since registration
+		= (max_date - regist_date).days
+	- online_ratio 
+		- #days interacted/number of days on app 
+
+- What we see (insights/Data Exploration)
+	- Hash_userid: 
+		- each user has data per month 2022-10 to 2023-01
+		- once user is inactive in a month, there is no data for the following month
+	- online ratio for active and inactive users
+	- High number of registrations during promotions but not equating to revenue/spend on the apps
+ 	- Users registered in 2023 are marked as inactive on the data file
+	- On average, users who have cards binded 
+		- spend more than those who dont
+		- avg number of days interacted with the app is higher
+	- An outlier: A user that is inactive in 2023 spent over R100 000 (probably error on the data)
+	- what makes a user to go inactive?
+
+- Model selection
+	- sklearn - how to pick a model
+	- sklearn - try a few models
+- Model Evaluation
+	- sklearn for evaluation
+
+-Implementation ideas:
+	- Please call me concept: a user can request data from another through the vodapay app.
+	- relook at redesigning the app to be more user friendly
+	- advertise at partner stores with discounts
+	- come up with specific adverts for specific benefits
+	- reward long term users
+	- investigate adding streamlined apps 
+		- (remove apps users has not used for a certain amount of time but can still search them)
+	- as soon as user installs and registers on vodapay - disable/migrate the My Vodacom App profile
+	
